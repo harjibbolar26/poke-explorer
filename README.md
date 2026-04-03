@@ -180,7 +180,9 @@ WCAG 2.1 AA issues addressed:
 | `PokemonCard.tsx` | `aria-label="View details for {name}"` on card link | WCAG 2.4.6 |
 | `Breadcrumb.tsx` | `aria-label="Breadcrumb"`, `aria-current="page"` | WCAG 4.1.2 |
 
-Run an audit:
+**PageSpeed Insights audit (desktop):** https://pagespeed.web.dev/analysis/https-pokeexplorer-pokemon-explorer-workers-dev/e5i2vi27z3?hl=en-GB&form_factor=desktop
+
+Run a local audit:
 
 ```bash
 npx axe-cli http://localhost:3000
