@@ -23,7 +23,7 @@ curl -sI https://pokeexplorer.pokemon-explorer.workers.dev | grep -i cache
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/your-username/pokeexplorer.git
+git clone https://github.com/harjibbolar26/poke-explorer.git
 cd pokeexplorer
 npm install
 
