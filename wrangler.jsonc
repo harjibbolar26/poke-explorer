@@ -1,0 +1,40 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pokeexplorer",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2024-12-30",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "cache_ttl": 3600,
+  "cache_ttl_by_status": {
+    "200": 3600,
+    "301": 86400,
+    "404": 60
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "pokeexplorer"
+    }
+  ],
+  "vars": {
+    "NEXT_PUBLIC_POKEAPI_BASE_URL": "https://pokeapi.co/api/v2",
+    "NEXT_PUBLIC_POKEMON_SPRITES_BASE": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon",
+    "NEXT_PUBLIC_SPRITES_HOSTNAME": "raw.githubusercontent.com",
+    "NEXT_PUBLIC_FONT_PRECONNECT_URL": "https://api.fontshare.com",
+    "NEXT_PUBLIC_FONT_STYLESHEET_URL": "https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap",
+    "NEXT_PUBLIC_APP_URL": "https://pokeexplorer.pokemon-explorer.workers.dev"
+  },
+  "images": {
+    "binding": "IMAGES"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
